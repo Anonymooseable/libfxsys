@@ -1,0 +1,18 @@
+import os
+Import('env')
+
+files = [ 'print', 'printc', 'printline', 'printrev', 'printrevc', 'printrline', 'printxy', 'locate', 'locate_os', 'printmini','printminisd']
+
+objects = []
+
+for curfile in files:
+	# change to the proper file extension
+	if os.path.isfile(curfile+'.S'):
+		curfileext = curfile + '.S'
+	else:
+		curfileext = curfile + '$CFILESUFFIX'
+	
+	o = env.Object('#/objects/' + curfile + '.o', curfileext);
+	objects.append(o)
+	
+Return('objects')

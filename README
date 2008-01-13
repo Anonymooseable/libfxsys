@@ -1,0 +1,40 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>> libfxsys v0.1 - system calls for the fx-9860G (SD) operating system	>>
+>>									>>
+>>  This library is part of the fxSDK project (fxsdk.sf.net), and is	>>
+>>  maintained by Andreas Bertheussen <andreasmarcel@gmail.com>		>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  This library  contains the source code needed to utilize the basic
+system calls on the Casio fx-9860G (SD) calculator. The functions written
+in assembly are generic calls, and can hardly be considered my `work' in
+a copyrightable sense. Other functions have extra code to check or
+control the validity of the arguments supplied by the user, or to invoke
+the system calls with specific arguments. The license (in the LICENSE
+file) only applies to those functions and not to the system calls.
+
+  Definitions for the available functions can be found in the header
+files print.h, key.h and file.h located in the include/ directory.
+
+>> Compiling the library
+  Before going through the hassle of compiling this library, you could
+look for a precompiled version on the website (fxsdk.sf.net). If you
+cannot find one, or if you want to modify the library, you will have to
+build the library yourself by following the instructions in the next
+paragraph.
+
+  To build the archive, you will need a cross compiling GCC for the sh3
+architecture. It has to be able to produce code for a big endian target
+A target string that works for the architecture is
+sh3eb-unknown-linux-gnu, but I am not able to provide a guide to install
+this software on your system. If you run Gentoo Linux, you can try the
+crossdev utility (in portage). SCons is used to automate the build
+process and to assemble the library. SCons depends on python. What you
+have to do to easily compile the library is the following;
+  1) Install scons and gcc. Figure out the command you have to run to
+	invoke the sh3 gcc in big endian mode, in my case that would be
+	`sh3eb-unknown-linux-gnu-gcc'.
+  2) Edit the SConstruct file and set the variable cc to the command
+  	you just figured out.
+  3) Execute `scons', and watch your libos.a get built.
+
