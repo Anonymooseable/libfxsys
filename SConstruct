@@ -9,7 +9,7 @@ env = Environment( CPPPATH='../include/', CCFLAGS = ccflags, ENV = {'PATH' : os.
 Export('env')
 
 # the subdirectories we want to work with
-subdirectories = ['file', 'key', 'print']
+subdirectories = ['file', 'key', 'print', 'disp']
 
 # list collecting all object names created
 objects = []
