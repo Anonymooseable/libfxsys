@@ -1,7 +1,8 @@
 import os
 Import('env')
 
-files = [ 'getkey', 'getkeywait']
+files = [ 'getkey', 'getkeywait',
+ 'set_repeattime_default', 'set_repeattime', 'get_repeattime']
 
 objects = []
 

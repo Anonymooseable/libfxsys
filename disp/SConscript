@@ -3,7 +3,7 @@ Import('env')
 
 files = [ 'allclr', 'areaclr', 'areareverse', 'getdisp', 'putdisp',
 'putdisparea', 'setpoint', 'getpoint', 'writegraph', 'readarea', 'drawline',
-'clearline' ]
+'clearline', 'savedisp', 'restoredisp' ]
 
 objects = []
 

@@ -19,4 +19,4 @@ for subdirectory in subdirectories:
 	objects.extend(o)
 
 # create the library from all the object files
-env.Library('libos.a', objects)
+env.Library('libfxsys.a', objects)

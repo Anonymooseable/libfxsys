@@ -11,7 +11,7 @@
 #define KEY_CHAR_7		0x37
 #define KEY_CHAR_8		0x38
 #define KEY_CHAR_9		0x39
-#define KEY_CHAR_D		0x2e
+#define KEY_CHAR_DP		0x2e
 #define KEY_CHAR_EXP		0x0f
 #define KEY_CHAR_PMINUS		0x87
 #define KEY_CHAR_PLUS		0x89
