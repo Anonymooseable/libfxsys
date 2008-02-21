@@ -9,5 +9,4 @@ int Bfile_OpenFile(const unsigned short *, int);
 int Bfile_CloseFile(int);
 int Bfile_GetFileSize(int);
 
-
 #endif

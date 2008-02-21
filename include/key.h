@@ -5,6 +5,9 @@
 
 int GetKey(unsigned int *keycode);
 int GetKeyWait(int sel, int time, int menu, unsigned int *keycode);
+void Bkey_Set_RepeatTime(long firstdelay, long holddelay);
+void Bkey_Get_RepeatTime(long *firstdelay, long *holddelay);
+void Bkey_Set_RepeatTime_Default(void);
 
 #define KEYWAIT_HALTON_TIMEROFF		0
 #define KEYWAIT_HALTOFF_TIMEROFF	1
