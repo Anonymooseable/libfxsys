@@ -1,0 +1,11 @@
+# the subdirectories we want to work with
+subdirectories = ['official']
+
+# list collecting all object names created
+objects = []
+
+for subdirectory in subdirectories:
+	o = SConscript('%s/SConscript' % subdirectory)
+	objects.extend(o)
+
+Return('objects')
