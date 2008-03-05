@@ -1,10 +1,3 @@
 #include <asm.h>
 
-ENTRY(PopUpWin)
-	mov.l 1f, r0
-	mov.l table_address, r2
-	jmp @r2
-	nop
-1:	.long 0x8fe
-
-#include <jumptable.h>
+SYSCALL(PopUpWin, 0x8fe)

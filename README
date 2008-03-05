@@ -5,7 +5,7 @@
 >>  maintained by Andreas Bertheussen <andreasmarcel@gmail.com>		>>
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-  This library  contains the source code needed to utilize the basic
+  This library  contains the source code needed to utilize several
 system calls on the Casio fx-9860G (SD) calculator. The functions written
 in assembly are generic calls, and can hardly be considered my `work' in
 a copyrightable sense. Other functions have extra code to check or
@@ -14,7 +14,12 @@ the system calls with specific arguments. The license (in the LICENSE
 file) only applies to those functions and not to the system calls.
 
   Definitions for the available functions can be found in the header
-files print.h, key.h and file.h located in the include/ directory.
+files located in the include/ directory. Including include/official.h
+should be done if you wish to use the library only as a compatibility
+lib, to compile code written with the official SDK or similar. The
+official.h include file will not declare functions not in the official
+SDK. It is _not_ complete, and should be considered beta software, though
+I _do_ care about your comments ;)
 
 >> Compiling the library
   Before going through the hassle of compiling this library, you could
@@ -36,5 +41,5 @@ have to do to easily compile the library is the following;
 	`sh3eb-unknown-linux-gnu-gcc'.
   2) Edit the SConstruct file and set the variable cc to the command
   	you just figured out.
-  3) Execute `scons', and watch your libos.a get built.
+  3) Execute `scons', and watch your libfxsys.a get built.
 

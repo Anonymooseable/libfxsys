@@ -1,24 +1,7 @@
 #include <asm.h>
 
-ENTRY(Bdisp_SetPoint_DD)
-	mov.l 1f, r0
-	mov.l table_address, r2
-	jmp @r2
-	nop
-1:	.long 0x147
+SYSCALL_BARE(Bdisp_SetPoint_DD, 0x147)
+SYSCALL_BARE(Bdisp_SetPoint_VRAM, 0x146)
+SYSCALL_BARE(Bdisp_SetPoint_DDVRAM, 0x148)
 
-ENTRY(Bdisp_SetPoint_VRAM)
-	mov.l 1f, r0
-	mov.l table_address, r2
-	jmp @r2
-	nop
-1:	.long 0x146
-
-ENTRY(Bdisp_SetPoint_DDVRAM)
-	mov.l 1f, r0
-	mov.l table_address, r2
-	jmp @r2
-	nop
-1:	.long 0x148
-
-#include <jumptable.h>
+SYSCALL_ADDRESS

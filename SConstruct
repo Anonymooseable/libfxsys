@@ -3,7 +3,7 @@ import os
 #the name of our GNU C cross compiler
 cc = 'sh3eb-unknown-linux-gnu-gcc'
 ar = 'sh3eb-unknown-linux-gnu-ar'
-ccflags = '-Os -nostdlib -Wall -fomit-frame-pointer'
+ccflags = '-Os -nostdlib -Wall -fomit-frame-pointer -fno-ident'
 
 env = Environment( CPPPATH='../include/', CCFLAGS = ccflags, ENV = {'PATH' : os.environ['PATH']}, CC = cc, AR = ar );
 Export('env')
@@ -19,4 +19,5 @@ for subdirectory in subdirectories:
 	objects.extend(o)
 
 # create the library from all the object files
-env.Library('libfxsys.a', objects)
+lib = env.Library('libfxsys.a', objects)
+Clean(lib, 'objects');

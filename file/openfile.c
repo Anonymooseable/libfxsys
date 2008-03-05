@@ -1,3 +1,4 @@
+#include <official/file.h>
 
 extern int Bfile_OpenFile_OS(const unsigned short *, int, int);
 
