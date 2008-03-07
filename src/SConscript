@@ -1,5 +1,5 @@
 # the subdirectories we want to work with
-subdirectories = ['official']
+subdirectories = ['print', 'key', 'file', 'disp', 'stdlib', 'string']
 
 # list collecting all object names created
 objects = []
