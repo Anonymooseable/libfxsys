@@ -1,7 +1,7 @@
 import os
 Import('env')
 
-files = ['memcmp', 'memcpy', 'memset', 'strcat', 'strcmp', 'strlen', 'strncat', 'strncmp']
+files = ['memcmp', 'memcpy', 'memmove', 'memset', 'strcat', 'strcmp', 'strlen', 'strncat', 'strncmp']
 
 objects = []
 

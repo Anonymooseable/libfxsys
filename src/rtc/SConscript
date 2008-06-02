@@ -1,7 +1,7 @@
 import os
 Import('env')
 
-files = ['abs', 'atoi', 'labs', 'calloc', 'free', 'malloc', 'realloc', 'syscall']
+files = [ 'rtcreset', 'rtcgettime', 'rtcsetdatetime', 'rtcgetticks' ]
 
 objects = []
 
