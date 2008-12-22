@@ -1,3 +1,3 @@
 #include <asm.h>
 
-SYSCALL(App_Memory, 0xA6B)
+SYSCALL(App_MEMORY, 0xA6B)

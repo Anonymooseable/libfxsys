@@ -1,9 +1,9 @@
 import os
 
 #the name of our GNU C cross compiler
-cc = 'sh3eb-unknown-linux-gnu-gcc'
-ar = 'sh3eb-unknown-linux-gnu-ar'
-ccflags = '-Os -nostdlib -Wall -fomit-frame-pointer -fno-ident'
+cc = 'sh3eb-elf-gcc'
+ar = 'sh3eb-elf-ar'
+ccflags = '-Os -nostdlib -Wall -fomit-frame-pointer -fno-ident -Iinclude'
 
 env = Environment( CPPPATH='#include/', CCFLAGS = ccflags, ENV = {'PATH' : os.environ['PATH']}, CC = cc, AR = ar );
 Export('env')

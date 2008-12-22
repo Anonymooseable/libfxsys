@@ -1,7 +1,7 @@
 import os
 Import('env')
 
-files = ['abs', 'atoi', 'div', 'labs', 'calloc', 'free', 'ldiv', 'malloc', 'realloc', 'syscall']
+files = ['ctype_']
 
 objects = []
 

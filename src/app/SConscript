@@ -1,7 +1,7 @@
 import os
 Import('env')
 
-files = [ 'appequation', 'appprogram', 'appmemory' ]
+files = [ 'appequa', 'appmemory', 'appprog', 'appdyna', 'appeact', 'appfinance', 'appgraphtable', 'applink', 'apprecur', 'apprunmat', 'apprunstat', 'appsystem' ]
 
 objects = []
 

@@ -16,4 +16,8 @@ extern void	PrintRLine(const unsigned char *, int);
 extern void	PrintMini(int, int, const unsigned char*, int);
 extern void	PrintXY(int, int, const unsigned char *, int);
 
+#ifndef ONLY_OFFICIAL_CALLS
+
+#endif
+
 #endif
