@@ -5,6 +5,8 @@
 >>  maintained by Andreas Bertheussen <andreasmarcel@gmail.com>		>>
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+>> Modified by Linus Heckemann to become part of fxSDK-ng.
+
   This library  contains the source code needed to utilize several
 system calls on the Casio fx-9860G (SD) calculator. The functions written
 in assembly are generic calls, and can hardly be considered my `work' in
@@ -35,10 +37,11 @@ this software on your system. If you run Gentoo Linux, you can try the
 crossdev utility (in portage). SCons is used to automate the build
 process and to assemble the library. SCons depends on python. What you
 have to do to easily compile the library is the following;
-  1) Install scons and gcc. Figure out the command you have to run to
+  1) Install cmake and gcc. Figure out the command you have to run to
 	invoke the sh3 gcc in big endian mode, in my case that would be
-	`sh3eb-unknown-linux-gnu-gcc'.
-  2) Edit the SConstruct file and set the variable cc to the command
-  	you just figured out.
-  3) Execute `scons', and watch your libfxsys.a get built.
-
+	`sh3eb-casio-elf-gcc'.
+  2) Create a build directory, change into it, and use
+    `cmake -DSH3_TOOLCHAIN_ROOT=<where you installed the toolchain> \
+     -DSH3_TUPLE=<tuple>` where the tuple is what comes before '-gcc' -
+     that is, in my case, sh3eb-casio-elf.
+  3) Compile: using make.
