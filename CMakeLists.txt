@@ -5,7 +5,7 @@ list (APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/Modules")
 
 if (NOT CMAKE_TOOLCHAIN_FILE)
   if (NOT SH3_TOOLCHAIN_ROOT)
-    message (WARNING "No toolchain file was specified, nor was a toolchain installation root. Many assumptions are going to be made about your environment, which may be incorrect.\nIf any errors are encountered, please write a toolchain file and use that (see http://www.cmake.org/Wiki/CMake_Cross_Compiling for instructions)\nAlternatively, specify where your toolchain was installed and we will attempt to find the necessary stuff automatically.\nOne of the assumptions is that you have already set up a gcc toolchain for building for the (ex-Renesas) Hitachi SuperH 3 architecture.\nAnother is that it is located in ~/x-tools/sh3eb-casio-elf-gcc.")
+    message (WARNING "No toolchain file was specified, nor was a toolchain installation root. Many assumptions are going to be made about your environment, which may be incorrect.\nIf any errors are encountered, please write a toolchain file and use that (see http://www.cmake.org/Wiki/CMake_Cross_Compiling for instructions)\nAlternatively, specify where your toolchain was installed and we will attempt to find the necessary stuff automatically.\nOne of the assumptions is that you have already set up a gcc toolchain for building for the (ex-Hitachi) Renesas SuperH 3 architecture.\nAnother is that it is located in ~/x-tools/sh3eb-casio-elf-gcc.")
     set (OLD_PATH "$ENV{PATH}")
     set (ENV{PATH} "$ENV{PATH}:$ENV{HOME}/x-tools/sh3eb-casio-elf-gcc/bin")
 
