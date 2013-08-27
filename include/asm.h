@@ -2,8 +2,8 @@
 #define _SYSCALL_H_
 
 /* template for generic functions with global name */
-/*#define _C_LABEL(x)	_ ## x*/	/* prefix fn name with _ */
-#define _C_LABEL(x)	x
+#define _C_LABEL(x)	_ ## x	/* prefix fn name with _ */
+/*#define _C_LABEL(x)	x*/
 #define _ENTRY(name)	\
 	.text; .align 2; .global name; name:
 #define ENTRY(name)	\
